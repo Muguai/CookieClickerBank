@@ -1,0 +1,98 @@
+body{
+    background-image: url('city.jpg'); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#bankContainer {
+    margin-RIGHT: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: green;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    
+  }
+  #workContainer {
+    
+    margin-left: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: red;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+
+  }
+  #laptopContainer {
+    
+    border-radius: 10px;
+    padding: 10px;
+    background-color: grey;
+    width: 900px;
+    height: 300px;
+  }
+
+  #bankImage{
+    position: relative; 
+    max-height:90%; 
+    max-width:100%;
+
+  }
+  #bankImage:hover{
+
+    
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+                drop-shadow(-2px 2px 0 white)
+                drop-shadow(2px -2px 0 white)
+                drop-shadow(-2px -2px 0 white);
+
+    filter: drop-shadow(2px 2px 0 white)
+            drop-shadow(-2px 2px 0 white)
+            drop-shadow(2px -2px 0 white)
+            drop-shadow(-2px -2px 0 white);
+    transition: all 0.5s ease; 
+  }
+  #officeImage{
+    max-height:90%; 
+    max-width:150%;
+  }
+
+  #officeImage:hover{
+    -webkit-filter: drop-shadow(2px 2px 0 white)
+                drop-shadow(-2px 2px 0 white)
+                drop-shadow(2px -2px 0 white)
+                drop-shadow(-2px -2px 0 white);
+
+    filter: drop-shadow(2px 2px 0 white)
+            drop-shadow(-2px 2px 0 white)
+            drop-shadow(2px -2px 0 white)
+            drop-shadow(-2px -2px 0 white);
+    transition: all 0.5s ease; 
+  }
+
+  h2{
+    position: absolute;
+  }
+
+  #upper {
+    position: relative;
+    width:100%; 
+    margin-bottom: 3%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  #lower {
+    position: relative;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }

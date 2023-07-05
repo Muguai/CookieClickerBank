@@ -1,0 +1,35 @@
+<Html>
+    <head>
+        <title>Bank</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="bank.css">
+        <script src="Scripts/bank.js"></script>
+        <script src="Scripts/office.js"></script>
+
+    </head>
+    <body>
+        <div id ="upper">
+            <div id="bankContainer">
+                <img id="bankImage" src="bank.png"  alt="BANK IMAGE">
+                <h2 id="balanceText">Balance: 0</h2>
+                <button>Get a loan</button>
+                <button>Pay loan</button>
+
+            </div>
+            <div id="workContainer">
+                <img id="officeImage" src="office.png"  alt="OFFICE IMAGE">
+                <h2 id="payText">Pay: 0</h2>
+                <button id="workButton"  onclick="increasePay()">Work</button>
+                <button id="bankButton" onclick="putEarningsInBank()">Bank</button>
+            </div>
+        </div>
+        <div id ="lower">
+
+            <div id="laptopContainer">
+
+            </div>
+        </div>
+
+    </body>
+</Html>
