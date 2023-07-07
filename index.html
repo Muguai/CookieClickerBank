@@ -16,18 +16,20 @@
         <div id="click-Message">+1</div>
         <div id ="upper">
             <div id="bankContainer">
-                <img id="bankImage" src="bank.png"  alt="BANK IMAGE">
+                <img id="bankImage" class="restrictImage" src="bank.png"  alt="BANK IMAGE">
 
-                <div id="bankText">  
-                    <h2 id="balanceText">Balance: 0</h2>
-                    <h2 id="loanText">Loan: 0</h2>
+                <h2 id="balanceText">Balance: 0</h2>
+                <h2 id="loanText">Loan: 0</h2>
+                <div>
+                    <button class="flex" id="getLoanButton"onclick="getALoan()">Get a loan</button>
+                    <button class="flex"id="payLoanButton"onclick="payLoan()">Pay loan</button>
                 </div>
-                <button id="getLoanButton"onclick="getALoan()">Get a loan</button>
-                <button id="payLoanButton"onclick="payLoan()">Pay loan</button>
+                
+            
 
             </div>
             <div id="workContainer">
-                <img id="officeImage" src="office.png"  alt="OFFICE IMAGE">
+                <img id="officeImage" class="restrictImage" src="office.png"  alt="OFFICE IMAGE">
                 <h2 id="payText">Pay: 0</h2>
                 <button id="workButton">Work</button>
                 <button id="bankButton" onclick="putEarningsInBank()">Bank</button>

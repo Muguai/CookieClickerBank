@@ -19,7 +19,7 @@ function putEarningsInBank(){
 function transferMoneyVisuals(){
 
     const payText = document.getElementById("payText");
-    const balanceText = document.getElementById("balanceText");
+    const balanceText = document.getElementById("bankImage");
 
     const balanceTransfer = document.createElement('div');
     balanceTransfer.style.position = 'absolute';
@@ -31,11 +31,11 @@ function transferMoneyVisuals(){
 
     balanceTransfer.innerText = worker.pay + "$";
 
-    balanceTransfer.style.transition = 'all 0.7s ease-in-out';
+    balanceTransfer.style.transition = 'all 0.5s ease-in-out';
     
     setTimeout(() => {
-        balanceTransfer.style.left = `${getOffset(balanceText).left + 70}px`;
-        balanceTransfer.style.top = `${getOffset(balanceText).top + 10}px`;
+        balanceTransfer.style.left = `${getOffset(balanceText).left + balanceText.getBoundingClientRect().width / 2}px`;
+        balanceTransfer.style.top = `${getOffset(balanceText).top + balanceText.getBoundingClientRect().height / 2}px`;
     
     }, 100);
 

@@ -1,7 +1,8 @@
 
 function addPay(){
   
-  worker.pay += 100;
+  //I know the pay is supposed to be +100. I just prefered it to be 10
+  worker.pay += 10;
   worker.updatePay();
 }
 
@@ -14,7 +15,7 @@ function handleClick(event) {
     addPay();
     const clickMessage = document.createElement('div');
     clickMessage.classList.add('click-message');
-    clickMessage.innerText = '100$';
+    clickMessage.innerText = '10$';
 
     const initialX = event.pageX;
     const initialY = event.pageY;

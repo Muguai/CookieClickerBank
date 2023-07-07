@@ -7,6 +7,8 @@ body{
 
 }
 
+
+
 #bankContainer {
     margin-right: 5%;
     border-radius: 10px;
@@ -14,6 +16,8 @@ body{
     background-color: green;
     width: 10%;
     height: 100%;
+    justify-content: center;
+
     
   }
   #workContainer {
@@ -49,12 +53,34 @@ body{
     
 }
 
-#bankText{
+  @keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+  .bounce-animation {
+    max-height: 5%;
+    max-width: 5%;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+#balanceText{
   position: relative;
 
-  font-size: 0.6vw;
-  max-height: 100%;
-  max-width: 100%;
+  font-size: 1vw;
+  margin-bottom: 6px;
+  margin-top: -2px;
+
+}
+
+#loanText{
+  position: relative;
+  margin-top: 6px;
+  font-size: 1vw;
 
 }
 
@@ -64,6 +90,17 @@ body{
   font-size: 1vw;
 
 }
+
+#getLoanButton{
+  position: relative;
+}
+#payLoanButton{
+  float:left;
+  margin-right: 3%;
+
+}
+
+
 
   #laptopFeatureText {
     font-size: x-small;
@@ -87,16 +124,8 @@ body{
     word-wrap: break-word;
     width: 40%;
   }
-
-  #bankImage{
-    position: relative; 
-    max-height:90%; 
-    max-width:100%;
-
-  }
-
   
-  #officeImage{
+  .restrictImage{
     position: relative; 
 
     
@@ -118,10 +147,6 @@ body{
     transition: all 0.5s ease; 
   }
 
-  #bankText{
-    display: flex;
-    justify-content: space-between;
-  }
 
   #officeImage:hover{
     -webkit-filter: drop-shadow(2px 2px 0 white)
