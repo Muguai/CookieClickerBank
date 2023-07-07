@@ -7,14 +7,14 @@ function addPay(){
 
 const workButton = document.getElementById("workButton");
 
-//Creates a div with a text in it and sends that text up in an arch
+//Creates a div with a text in it and sends that text up/down in an arch
 //Animation for when clicking the WORK button 
 function handleClick(event) {
 
     addPay();
     const clickMessage = document.createElement('div');
     clickMessage.classList.add('click-message');
-    clickMessage.innerText = '+100';
+    clickMessage.innerText = '100$';
 
     const initialX = event.pageX;
     const initialY = event.pageY;
@@ -50,8 +50,6 @@ function handleClick(event) {
         clearInterval(intervalId);
         clickMessage.remove();
       }, 1500);
-
-    document.body.appendChild(clickMessage);
 }
 
 workButton.addEventListener('click', handleClick);

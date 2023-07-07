@@ -25,7 +25,11 @@ function transferMoneyVisuals(){
     balanceTransfer.style.position = 'absolute';
     balanceTransfer.style.left = `${getOffset(payText).left + 50}px`;
     balanceTransfer.style.top = `${getOffset(payText).top + 10}px`;
-    balanceTransfer.innerText = worker.pay;
+    balanceTransfer.style.border = "thick solid green";
+    balanceTransfer.style.background = "lightgreen";
+    balanceTransfer.style.color = "green";
+
+    balanceTransfer.innerText = worker.pay + "$";
 
     balanceTransfer.style.transition = 'all 0.7s ease-in-out';
     
