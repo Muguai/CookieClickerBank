@@ -69,12 +69,10 @@ function buyLaptop(){
         return;
     }
 
-    worker.balance -= Number(splitText[0]);
-    worker.updateBankBalance();
+    worker.withdrawBank(Number(splitText[0]));
 
     const nameHeader = document.getElementById("laptopInfoTitle");
 
-    
     worker.addLaptop(Math.round(Number(splitText[0])/20),nameHeader.textContent);
 }
 

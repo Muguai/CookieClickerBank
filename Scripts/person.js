@@ -28,6 +28,15 @@ class Person {
         text.textContent = "Balance: " + this.balance;
     }
 
+    removePay(amount){
+        worker.pay -= amount;
+        worker.updatePay();
+    }
+
+    addPay(amount){
+        worker.pay += amount;
+        worker.updatePay();
+    }
     
     updatePay(){
         const text = document.getElementById("payText");
@@ -40,7 +49,7 @@ class Person {
     }
 
     addLaptop(balanceAdd, name){
-        this.boughtLaptops.push(new Laptop(balanceAdd, name, this.boughtLaptops.length, this))
+        this.boughtLaptops.push(new Laptop(balanceAdd, name, this.boughtLaptops.length, this, this.calculateBankImageCenter()))
         this.updateLaptops();
     }
 
@@ -49,7 +58,7 @@ class Person {
             return;
         const angleIncrement = 360 / this.boughtLaptops.length;
 
-        let [imgCenterX,imgCenterY] = this.calculateParentImageCenter();
+        let [imgCenterX,imgCenterY] = this.calculateBankImageCenter();
 
         const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -59,14 +68,18 @@ class Person {
             const angle = i * angleIncrement;
             const smallImageX = imgCenterX + radius * Math.cos(angle * Math.PI / 180);
             const smallImageY = imgCenterY + radius * Math.sin(angle * Math.PI / 180);
+            let smallImg = this.boughtLaptops[i].img;
+            const finalX = smallImageX - smallImg.getBoundingClientRect().width / 2;
+            const finalY = smallImageY - smallImg.getBoundingClientRect().width / 2; 
+            this.boughtLaptops[i].bankImagePos = [finalX, finalY]
 
-            let smallImg = this.boughtLaptops[i].img; 
-            smallImg.style.left = smallImageX - smallImg.getBoundingClientRect().width / 2 + 'px';
-            smallImg.style.top = smallImageY - smallImg.getBoundingClientRect().width / 2 + 'px';
+             
+            smallImg.style.left = finalX + 'px';
+            smallImg.style.top = finalY + 'px';
         }
     }
 
-    calculateParentImageCenter(){
+    calculateBankImageCenter(){
         let imgRect = this.parentImage.getBoundingClientRect();
 
         let imgCenterX = imgRect.left + imgRect.width / 2;
@@ -82,21 +95,16 @@ const worker = new Person();
 
 class Laptop {
 
-    constructor(balanceAdd, name, laptopNumber,parent ) {
+    constructor(balanceAdd, name, laptopNumber,parent, bankImagePos ) {
         this.balanceAdd = balanceAdd;
         this.name = name;
-        this.isMovingOut = false;
-        this.offset = 100;
         this.img = document.createElement('img');
         this.img.style.position = 'absolute';
-        //this.img.innerText = "$";
+        this.bankImagePos = bankImagePos;
         this.img.classList.add('bounce-animation');
-       
         this.parent = parent;
         this.img.src = 'https://cdn4.iconfinder.com/data/icons/app-ui/100/laptop-512.png';
         this.img.style.animationDelay = laptopNumber * 100 + 'ms';
-        console.log("here we add eventListener");
-        this.img.addEventListener("animationend", this.increaseBalanceTick());
 
         document.body.appendChild(this.img);
 
@@ -111,23 +119,38 @@ class Laptop {
         const tempText = document.createElement("div");
 
         tempText.innerText = this.balanceAdd + "$";
-        let [imgCenterX,imgCenterY] = this.parent.calculateParentImageCenter();
-        const initialY = imgCenterX + tempText.getBoundingClientRect().width / 2;
-        const initialX = imgCenterY + tempText.getBoundingClientRect().width / 2;
+        const initialX = this.bankImagePos[0];
+        const initialY = this.bankImagePos[1];
+        const [imgCenterX, imgCenterY] = this.parent.calculateBankImageCenter();
 
         tempText.style.position = "absolute";
-        tempText.style.left = initialY+ 'px';
-        tempText.style.top = initialX+ 'px';
+        tempText.style.left = initialX+ 'px';
+        tempText.style.top = initialY+ 'px';
         tempText.style.border = "thick solid green";
         tempText.style.background = "lightgreen";
         tempText.style.color = "green";
         tempText.style.userSelect = "none";
+        tempText.style.opacity = "1";
+        tempText.style.maxHeight = 3 + "%";
+        tempText.style.maxWidth = 1 + "%";
+        tempText.style.fontSize = 0.5 + "vw";
+
+        
+        tempText.style.transition = 'all 0.4s ease-in-out';
 
         
         document.body.append(tempText);
-        //Make it so spawned text move from computer to middle of bank instead.
-        //Also add a transparent effect to it.
 
+        setTimeout(() => {       
+            tempText.style.left = imgCenterX+ 'px';
+            tempText.style.top = imgCenterY+ 'px';
+            tempText.style.opacity = "0.1";
+        }, 50);
+
+    
+        setTimeout(() => {  
+            tempText.remove();
+        }, 450);
     
     }
     

@@ -2,21 +2,19 @@ function putEarningsInBank(){
     if(worker.pay <= 0)
         return;
         
-    transferMoneyVisuals()
+    transferMoneyVisuals(worker.pay)
     if(worker.loan > 0){
         worker.loan -= (worker.pay / 10);
-        worker.pay -= (worker.pay / 10);
+        worker.removePay(worker.pay / 10);
         if(worker.loan <= 0)
-            hideLoan(true);
+            hideLoanUI(true);
     }
-    worker.balance += worker.pay;
-    worker.pay = 0;
-    worker.updatePay();
+    worker.removePay(worker.pay);
 
 }
 
 //Move the pay value visually to the bank balance through CSS transition
-function transferMoneyVisuals(){
+function transferMoneyVisuals(pay){
 
     const payText = document.getElementById("payText");
     const balanceText = document.getElementById("bankImage");
@@ -41,8 +39,9 @@ function transferMoneyVisuals(){
 
     document.body.appendChild(balanceTransfer);
 
-    setTimeout(() => {  
-        worker.updateBankBalance();    
+    setTimeout(() => { 
+        
+        worker.depositBank(pay);   
         worker.updateLoan();
         balanceTransfer.remove();
     }, 700);
@@ -64,6 +63,7 @@ function getALoan(){
     }
 
     let appliedLoan = prompt("How much would you like to loan?");
+
     if(isNaN(Number(appliedLoan))) {
         alert(appliedLoan + " is not a valid number");
         return;
@@ -79,7 +79,7 @@ function getALoan(){
         return;
     }
     
-    hideLoan(false);
+    hideLoanUI(false);
     worker.loan = Number(appliedLoan);
     worker.updateLoan();
 }
@@ -88,21 +88,19 @@ function payLoan(){
     worker.loan -= worker.pay;
 
     if(worker.loan < 0){
-        worker.balance += Math.abs(worker.loan);
+        worker.depositBank(Math.abs(worker.loan));
         worker.loan = 0;
     }
 
-    worker.pay = 0;
-    worker.updateBankBalance();
+    worker.removePay(worker.pay)
     worker.updateLoan();
-    worker.updatePay();
 
     if(worker.loan <= 0)
-        hideLoan(true)
+        hideLoanUI(true)
 }
 
 //Hides or shows the loan text and pay loan button
-function hideLoan(hide){
+function hideLoanUI(hide){
     console.log("get here");
     const loanText = document.getElementById("loanText");
     const loanButton = document.getElementById("payLoanButton");
@@ -116,4 +114,4 @@ function hideLoan(hide){
     }
 }
 
-hideLoan(true);
+hideLoanUI(true);

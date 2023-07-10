@@ -1,21 +1,15 @@
 
-function addPay(){
-  
-  //I know the pay is supposed to be +100. I just prefered it to be 10
-  worker.pay += 10;
-  worker.updatePay();
-}
-
 const workButton = document.getElementById("workButton");
+const payAmount = 100;
 
 //Creates a div with a text in it and sends that text up/down in an arch
 //Animation for when clicking the WORK button 
 function handleClick(event) {
 
-    addPay();
+    worker.addPay(payAmount);
     const clickMessage = document.createElement('div');
     clickMessage.classList.add('click-message');
-    clickMessage.innerText = '10$';
+    clickMessage.innerText = payAmount + '$';
 
     const initialX = event.pageX;
     const initialY = event.pageY;
