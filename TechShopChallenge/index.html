@@ -7,7 +7,9 @@
         <script defer src="Scripts/bank.js"></script>
         <script defer src="Scripts/office.js"></script>
         <script defer src="Scripts/person.js"></script>
-        <script defer src="Scripts/laptop.js"></script>
+        <script defer src="Scripts/laptopStore.js"></script>
+        <script defer src="Scripts/clouds.js"></script>
+
 
 
 
@@ -16,7 +18,7 @@
         <div id="click-Message">+1</div>
         <div id ="upper">
             <div id="bankContainer">
-                <img id="bankImage" class="restrictImage" src="bank.png"  alt="BANK IMAGE">
+                <img id="bankImage" class="restrictImage" src="img/bank.png"  alt="BANK IMAGE">
 
                 <h2 id="balanceText">Balance: 0</h2>
                 <h2 id="loanText">Loan: 0</h2>
@@ -29,7 +31,7 @@
 
             </div>
             <div id="workContainer">
-                <img id="officeImage" class="restrictImage" src="office.png"  alt="OFFICE IMAGE">
+                <img id="officeImage" class="restrictImage" src="img/office.png"  alt="OFFICE IMAGE">
                 <h2 id="payText">Pay: 0</h2>
                 <button id="workButton">Work</button>
                 <button id="bankButton" onclick="putEarningsInBank()">Bank</button>
@@ -37,25 +39,25 @@
         </div>
         <div id ="lower">
 
-            <div id="laptopContainer">
+            <div id="laptopContainer" class="grid">
                 <div id="laptopChooser">
-                    <h2>Laptops</h2>
+                    <h2 class="laptopText">Laptops</h2>
                     <select id ="laptopSelector" onchange="showLaptopInfo()"></select>
-                    <h4>Features:</h4>
-                    <p id ="laptopFeatureText">this is the features</p>
+                    <h4 class="laptopText">Features:</h4>
+                    <p class="laptopText break-words"id ="laptopFeatureText">this is the features</p>
 
                 </div>
                 <div id="laptopInfoDisplay">
-                    <img id="laptopPic" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png" alt="image not found">
-                    <h3 id ="laptopInfoTitle">LaptopName</h3>
-                    <p class="break-words" id="laptopInfo">this is the info</p>
+                    <img id="laptopPic" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png" alt="Laptop image not found">
+                    <h3 class="laptopText" id ="laptopInfoTitle">LaptopName</h3>
+                    <p class="break-words laptopText" id="laptopInfo">this is the info</p>
 
                 </div>
 
 
                 <div id="laptopBuyButton">
                     
-                    <h3 id ="laptopPrice">1500 KR</h3>
+                    <h3 class="laptopText" id ="laptopPrice">1500 KR</h3>
                     <button id ="laptopbuybtn" onclick="buyLaptop()">Buy</button>
 
                 </div>

@@ -104,6 +104,8 @@ class Laptop {
         this.img.classList.add('bounce-animation');
         this.parent = parent;
         this.img.src = 'https://cdn4.iconfinder.com/data/icons/app-ui/100/laptop-512.png';
+        this.img.alt = "$"
+        this.img.classList.add("unSelectable");
         this.img.style.animationDelay = laptopNumber * 100 + 'ms';
 
         document.body.appendChild(this.img);
@@ -132,7 +134,7 @@ class Laptop {
         tempText.style.userSelect = "none";
         tempText.style.opacity = "1";
         tempText.style.maxHeight = 3 + "%";
-        tempText.style.maxWidth = 1 + "%";
+        tempText.style.maxWidth = 2 + "%";
         tempText.style.fontSize = 0.5 + "vw";
 
         

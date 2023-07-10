@@ -1,9 +1,14 @@
 body{
-    background-image: url('city.jpg'); 
+    background-image: url('img/city.png'); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: cornflowerblue;
+    
+    max-width: 100%;
+    overflow-x: hidden;
+    
 
 }
 
@@ -33,10 +38,10 @@ body{
   #laptopContainer {
     border-radius: 10px;
     padding: 30px;
-    background-color: grey;
-    height: 250px;
+    background: rgba(100, 149, 237, 0.9);   
+    border: thick solid rgb(50, 100, 192);
+    height: 30%;
     width: 30%;
-    justify-content: space-evenly;
   }
 
   #laptopPic{
@@ -44,6 +49,19 @@ body{
     width: 100px;
 
   }
+
+  .laptopText{
+    
+    font-size: 0.9vw;
+  }
+
+  #laptopFeatureText{
+    position: relative;
+    margin-top: -5%;
+    font-size: 0.5vw;
+    white-space: pre;
+  }
+
 
   .centered {
   position: absolute;
@@ -71,8 +89,11 @@ body{
 
   font-size: 1vw;
   margin-bottom: 6px;
-  margin-top: -2px;
+  margin-top: 15px;
 
+}
+#laptopSelector{
+  width: 80%;
 }
 
 #loanText{
@@ -98,11 +119,6 @@ body{
 
 }
 
-
-
-  #laptopFeatureText {
-    font-size: x-small;
-  }
 
   #laptopChooser{
     position:absolute;
@@ -177,7 +193,6 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 5%;
   }
 
   .click-message {
@@ -193,3 +208,12 @@ body{
   #payText{
     display: block;
   }
+
+  .unSelectable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

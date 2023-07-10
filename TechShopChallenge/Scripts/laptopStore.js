@@ -52,7 +52,6 @@ function assignLaptopInfo(data){
     nameHeader.textContent = data["title"];
     infoText.textContent = data["description"];
     priceText.textContent = data["price"] + " $";
-    featureText.setAttribute('style', 'white-space: pre;');
     featureText.textContent = "";
     for(const i of data["specs"] ){
         featureText.textContent += i + "\r\n";
