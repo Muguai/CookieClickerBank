@@ -1,0 +1,16 @@
+.grid {
+    padding: 5em;
+    padding: 20px;
+    margin-right: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 50px;
+   
+ }
+
+ .grid-element {
+    
+    padding: 20px;
+    border: 1px solid #fff;
+  }
+  
