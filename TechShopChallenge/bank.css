@@ -186,18 +186,10 @@ body{
     pointer-events: none;
     transition: all 0.2s ease-in-out;
     color: green;
-
     border: thick solid green;
     background-color: lightgreen;
-    
-
   }
   
-  .fade-out {
-    opacity: 0;
-
-  }
-
   #payText{
     display: block;
   }

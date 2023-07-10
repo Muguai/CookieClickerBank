@@ -1,10 +1,9 @@
 
-const workButton = document.getElementById("workButton");
 const payAmount = 100;
 
 //Creates a div with a text in it and sends that text up/down in an arch
-//Animation for when clicking the WORK button 
-function handleClick(event) {
+//Updates Pay amount and starts Animation for when clicking the WORK button 
+function workButtonClick(event) {
 
     worker.addPay(payAmount);
     const clickMessage = document.createElement('div');
@@ -26,6 +25,7 @@ function handleClick(event) {
   
     let posX = initialX;
     let posY = initialY;
+
     const intervalId = setInterval(() => {
       posX += velocityX;
       posY += velocityY;
@@ -37,7 +37,7 @@ function handleClick(event) {
     }, 10);
 
     setTimeout(() => {
-        clickMessage.classList.add('fade-out');
+        clickMessage.style.opacity = "0";
       }, 1000);
 
 
@@ -47,4 +47,5 @@ function handleClick(event) {
       }, 1500);
 }
 
-workButton.addEventListener('click', handleClick);
+const workButton = document.getElementById("workButton");
+workButton.addEventListener('click', workButtonClick);
