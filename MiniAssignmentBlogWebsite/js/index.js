@@ -68,28 +68,3 @@ function initializeWebsite(){
 }
 
 initializeWebsite();
-
-/*
-                    <img class= "d-block w-100 card-img-top" src="img/pexels-dana-tentis-691114.jpg">
-
-                    <div class="card-header">
-                        <b class="card-text  text-black-50">Published: 20 MAR 2021</b>
-                    </div>
-                    <div class="card-body">
-
-                        <h2 class="card-text">Title of article</h2>
-                        <h4 class="card-text card-subtitle text-black-50 mb-4">SubTitle</h4>
-                        <p>
-                            Blah blah balahbalhbalhbalhlddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-                        </p>
-                        <p class="text-black-50 d-flex align-items-center">
-                            <span class="material-icons">person</span>
-                            Written by anonymous
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="badge bg-primary">#random</span>
-                        <span class="badge bg-primary">#dumb</span>
-                        <span class="badge bg-primary">#pointless</span>
-                    </div>
-*/

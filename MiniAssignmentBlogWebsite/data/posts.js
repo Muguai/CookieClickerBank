@@ -39,7 +39,7 @@ const post3 = {
     title: 'Imagine living a the the summit of this mountain',
     subTitle: 'It would be so cool',
     intro: 'Imagine yourself waking up everyday and looking at this awesome mountain. Who would not love that? you gotta be crazy not to love this mountain',
-    tags: ['Dreams', 'Goals', 'whyAreYouReadingThis?'],
+    tags: ['Dreams', 'Goals', 'WhyAreYouReadingThis?'],
     photo: 'img/pexels-joyston-judah-933054.jpg',
     author: 'MountainLover54',
     date: '26 MAR 2021'
