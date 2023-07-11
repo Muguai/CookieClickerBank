@@ -109,8 +109,8 @@ function hideLoanUI(hide){
         loanText.style.display = "block";
         loanButton.style.display = "block";
     } else {
-    loanText.style.display = "none";
-    loanButton.style.display = "none";
+        loanText.style.display = "none";
+        loanButton.style.display = "none";
     }
 }
 
