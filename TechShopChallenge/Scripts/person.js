@@ -5,6 +5,11 @@ class Person {
     this.balance = 0;
     this.boughtLaptops = [];
     this.parentImage = document.getElementById("bankImage");
+    this.balanceText = document.getElementById("balanceText");
+    this.payText = document.getElementById("payText");
+    this.loanText = document.getElementById("loanText");
+
+
 
      this.intervalId = setInterval(() => {
       this.updateLaptops();
@@ -22,8 +27,7 @@ class Person {
   }
 
   updateBankBalance() {
-    const text = document.getElementById("balanceText");
-    text.textContent = "Balance: " + this.balance + " $";
+    this.balanceText.textContent = "Balance: " + this.balance + " $";
   }
 
   removePay(amount) {
@@ -37,8 +41,7 @@ class Person {
   }
 
   updatePay() {
-    const text = document.getElementById("payText");
-    text.textContent = "Pay: " + this.pay + " $";
+    this.payText.textContent = "Pay: " + this.pay + " $";
   }
 
   getLoan(amount) {
@@ -52,8 +55,7 @@ class Person {
   }
 
   updateLoan() {
-    const text = document.getElementById("loanText");
-    text.textContent = "Loan: " + this.loan + " $";
+    this.loanText.textContent = "Loan: " + this.loan + " $";
   }
 
   addLaptop(balanceAdd, name) {
