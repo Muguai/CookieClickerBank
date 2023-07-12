@@ -1,4 +1,4 @@
-#Blog Website
+# Blog Website
 A skeleton for a blog website which taught me how amazing bootstrap is.
 
 ## Requirments
