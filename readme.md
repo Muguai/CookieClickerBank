@@ -1,4 +1,4 @@
-# Noroff accelarete assignment 1
+# Noroff Accelerate assignment 1
 
 Main assignment: Tech shop challenge
 
