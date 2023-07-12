@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fundamental Blog – Contact</title>
+    <title>Blackjack Game</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -28,43 +28,58 @@
 
     <div class ="container">
         <section id="playingField" class="visually-hidden">        
-            <h4 class="text-center">
+            <h4 id="dealerTitle" class="text-center">
                 Dealer
             </h4>
             <div id="dealer" class = "row justify-content-center">
                 <div class="col-3">
-                    <img id="topPostImage" class="w-100 h-100 card-img" src="img/6H.png">
+                    <img id="cardImage" class="card-img img-fluid" src="img/6H.png">
                 </div>
                 <div class="col-3">
-                    <img id="topPostImage" class="w-100 h-100 card-img" src="img/6H.png">
+                    <img id="cardImage" class="card-img img-fluid" src="img/6H.png">
                 </div>
             </div>
-            <div id="dealer" class = "row justify-content-center mt-5">
+            <div id="player" class = "row justify-content-center mt-5">
                 <div class="col-3">
-                    <img id="topPostImage" class="w-100 h-100 card-img" src="img/6H.png">
+                    <img id="cardImage" class="card-img img-fluid" src="img/6H.png">
                 </div>
                 <div class="col-3">
-                    <img id="topPostImage" class="w-100 h-100 card-img" src="img/6H.png">
+                    <img id="cardImage" class="card-img img-fluid" src="img/6H.png">
                 </div>
             </div>
-
-            <h4 class="text-center">
+            <h4 id="playerTitle"  class="text-center">
                 You
             </h4>
         </section>
         
         <div class = "row justify-content-center mt-3">
             <div class="col-1">
-                <button id="standButton" class="btn-outline-dark w-75">Stand</button>
+                <button id="standButton" class="btn btn-primary text-wrap">Stand</button>
             </div>
             <div class="col-1 ">
-                <button id="startButton" class="btn-outline-dark w-100">StartGame</button>
+                <button id="startButton" class="btn-primary text-wrap">StartGame</button>
             </div>
             <div class="col-1">
-                <button id="hitButton" class="btn-outline-dark w-75">Hit</button>
+                <button id="hitButton" class="btn btn-primary text-wrap">Hit</button>
             </div>
         </div>
-        
+       
+        <!-- Bootstrap modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Alert</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modaltext">Alert message goes here</p>
+                </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 
