@@ -163,5 +163,3 @@ class Laptop {
     }, 450);
   }
 }
-
-Worker.addLaptop(120, "coolLaptop");
