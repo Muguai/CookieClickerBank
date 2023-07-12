@@ -4,27 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel ="stylesheet" href="bank.css">
-        <script defer src="Scripts/bank.js"></script>
-        <script defer src="Scripts/office.js"></script>
-        <script defer src="Scripts/person.js"></script>
-        <script defer src="Scripts/laptopStore.js"></script>
+        <script type ="module" defer src="Scripts/bank.js"></script>
+        <script type ="module" defer src="Scripts/office.js"></script>
+        <script type ="module" defer src="Scripts/laptopStore.js"></script>
         <script defer src="Scripts/clouds.js"></script>
-
-
-
-
     </head>
     <body>
-        <div id="click-Message">+1</div>
         <div id ="upper">
             <div id="bankContainer">
                 <img id="bankImage" class="restrictImage" src="img/bank.png"  alt="BANK IMAGE">
 
-                <h2 id="balanceText">Balance: 0</h2>
-                <h2 id="loanText">Loan: 0</h2>
+                <h2 class="relativeFont heading" id="balanceText">Balance: 0 $</h2>
+                <h2 class="relativeFont heading" id="loanText">Loan: 0 $</h2>
                 <div>
-                    <button class="flex" id="getLoanButton"onclick="getALoan()">Get a loan</button>
-                    <button class="flex"id="payLoanButton"onclick="payLoan()">Pay loan</button>
+                    <button class="button" id="getLoanButton">Get a loan</button>
+                    <button class="button"id="payLoanButton">Pay loan</button>
                 </div>
                 
             
@@ -32,37 +26,30 @@
             </div>
             <div id="workContainer">
                 <img id="officeImage" class="restrictImage" src="img/office.png"  alt="OFFICE IMAGE">
-                <h2 id="payText">Pay: 0</h2>
-                <button id="workButton">Work</button>
-                <button id="bankButton" onclick="putEarningsInBank()">Bank</button>
+                <h2 class="relativeFont heading" id="payText">Pay: 0 $</h2>
+                <button class="button"id="workButton">Work</button>
+                <button class="button"id="bankButton">Bank</button>
             </div>
         </div>
         <div id ="lower">
-
             <div id="laptopContainer" class="grid">
                 <div id="laptopChooser">
-                    <h2 class="laptopText">Laptops</h2>
-                    <select id ="laptopSelector" onchange="showLaptopInfo()"></select>
-                    <h4 class="laptopText">Features:</h4>
-                    <p class="laptopText break-words"id ="laptopFeatureText">this is the features</p>
+                    <h2 class="relativeFont heading">Laptops</h2>
+                    <select class="selector" id ="laptopSelector""></select>
+                    <h4 class="relativeFont heading">Features:</h4>
+                    <p class="relativeFont break-words text" id="laptopFeatureText">this is the features</p>
 
                 </div>
                 <div id="laptopInfoDisplay">
                     <img id="laptopPic" src="https://hickory-quilled-actress.glitch.me/assets/images/1.png" alt="Laptop image not found">
-                    <h3 class="laptopText" id ="laptopInfoTitle">LaptopName</h3>
-                    <p class="break-words laptopText" id="laptopInfo">this is the info</p>
+                    <h3 class="relativeFont heading" id ="laptopInfoTitle">LaptopName</h3>
+                    <p class="break-words relativeFont text" id="laptopInfo">this is the info</p>
 
                 </div>
-
-
-                <div id="laptopBuyButton">
-                    
-                    <h3 class="laptopText" id ="laptopPrice">1500 KR</h3>
-                    <button id ="laptopbuybtn" onclick="buyLaptop()">Buy</button>
-
-                </div>
-                
-
+                <div id="laptopBuyDiv">
+                    <h3 class="relativeFont heading" id ="laptopPrice">1500 KR</h3>
+                    <button class="button"id ="laptopBuyButton">Buy</button>
+                </div>          
             </div>
         </div>
 

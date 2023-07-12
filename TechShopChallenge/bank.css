@@ -1,219 +1,222 @@
-body{
-    background-image: url('img/city.png'); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: cornflowerblue;
-    
-    max-width: 100%;
-    overflow-x: hidden;
-    
-
+body {
+  background-image: url("img/city.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: cornflowerblue;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
+#upper {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+}
 
+#lower {
+  margin-top: 2%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 #bankContainer {
-    margin-right: 5%;
-    border-radius: 10px;
-    padding: 10px;
-    width: 10%;
-    height: 100%;
-    justify-content: center;
-
-    
-  }
-  #workContainer {
-    
-    margin-left: 5%;
-    border-radius: 10px;
-    padding: 10px;
-    width: 10%;
-    height: 100%;
-    justify-content: center;
-
-
-  }
-  #laptopContainer {
-    border-radius: 10px;
-    padding: 30px;
-    background: rgba(100, 149, 237, 0.9);   
-    border: thick solid rgb(50, 100, 192);
-    height: 30%;
-    width: 30%;
-  }
-
-  #laptopPic{
-    height: 100px;
-    width: 100px;
-
-  }
-
-  .laptopText{
-    
-    font-size: 0.9vw;
-  }
-
-  #laptopFeatureText{
-    position: relative;
-    margin-top: -5%;
-    font-size: 0.5vw;
-    white-space: pre;
-  }
-
-
-  .centered {
-  position: absolute;
-  top: 65%;
-    
+  margin-right: 5%;
+  border-radius: 10px;
+  padding: 10px;
+  width: 10%;
+  height: 100%;
+  justify-content: center;
 }
 
-  @keyframes bounce {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-  }
+#workContainer {
+  margin-left: 5%;
+  border-radius: 10px;
+  padding: 10px;
+  width: 10%;
+  height: 100%;
+  justify-content: center;
+}
+#laptopContainer {
+  border-radius: 10px;
+  padding: 30px;
+  background: rgba(100, 149, 237, 0.9);
+  border: thick solid rgb(50, 100, 192);
+  height: 35%;
+  width: 30%;
+  display: flex;
+}
 
-  .bounce-animation {
-    max-height: 5%;
-    max-width: 5%;
-    animation-name: bounce;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
+#laptopPic {
+  max-height: 50%;
+  max-width: 50%;
+  border: thick solid rgb(50, 100, 192);
+  border-radius: 10px;
+}
 
-#balanceText{
+#laptopFeatureText {
   position: relative;
+  margin-top: -5%;
+  font-size: 0.5vw;
+  white-space: pre;
+}
 
-  font-size: 1vw;
+#balanceText {
+  position: relative;
   margin-bottom: 6px;
   margin-top: 15px;
-
-}
-#laptopSelector{
-  width: 80%;
 }
 
-#loanText{
+#loanText {
   position: relative;
   margin-top: 6px;
-  font-size: 1vw;
-
 }
 
-#payText{
-  position: relative;
-
-  font-size: 1vw;
-
-}
-
-#getLoanButton{
+#getLoanButton {
   position: relative;
 }
-#payLoanButton{
-  float:left;
+#payLoanButton {
+  float: left;
   margin-right: 3%;
+}
 
+#laptopChooser {
+  flex: 1;
+  margin-right: 5%;
+}
+
+#laptopInfoDisplay {
+  flex: 1.5;
+}
+
+#laptopBuyDiv {
+  margin-right: 5%;
+  flex: 1;
 }
 
 
-  #laptopChooser{
-    position:absolute;
+@keyframes bounce {
+  0% {
+    transform: scale(1);
   }
-
-  #laptopInfoDisplay{
-    position:absolute;
-    left: 48%;
+  50% {
+    transform: scale(1.2);
   }
-
-  #laptopBuyButton{
-    position:relative;
-    left: 80%;
+  100% {
+    transform: scale(1);
   }
+}
 
-  .break-words {
-    word-wrap: break-word;
-    width: 40%;
-  }
-  
-  .restrictImage{
-    position: relative; 
+.button {
+  display: inline-block;
+  padding: 10px 20px;
 
-    
-    max-height:90%; 
-    max-width:100%;
-  }
-  #bankImage:hover{
+  font-size: 0.5vw;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 40%;
+}
 
-    
-    -webkit-filter: drop-shadow(2px 2px 0 white)
-                drop-shadow(-2px 2px 0 white)
-                drop-shadow(2px -2px 0 white)
-                drop-shadow(-2px -2px 0 white);
+.button:hover {
+  background-color: #45a049;
+}
 
-    filter: drop-shadow(2px 2px 0 white)
-            drop-shadow(-2px 2px 0 white)
-            drop-shadow(2px -2px 0 white)
-            drop-shadow(-2px -2px 0 white);
-    transition: all 0.5s ease; 
-  }
+.button:active {
+  background-color: #3e8e41;
+}
 
+.selector {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.5vw;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 
-  #officeImage:hover{
-    -webkit-filter: drop-shadow(2px 2px 0 white)
-                drop-shadow(-2px 2px 0 white)
-                drop-shadow(2px -2px 0 white)
-                drop-shadow(-2px -2px 0 white);
+}
 
-    filter: drop-shadow(2px 2px 0 white)
-            drop-shadow(-2px 2px 0 white)
-            drop-shadow(2px -2px 0 white)
-            drop-shadow(-2px -2px 0 white);
-    transition: all 0.5s ease; 
-  }
+.selector:hover {
+  background-color: #45a049;
+}
 
-  #upper {
-    position: relative;
-    width:100%; 
-    height: 30%;
+.selector:active {
+  background-color: #3e8e41;
+}
 
-    margin-bottom: 3%;
-    margin-top: 3%;
-    display: flex;
-    justify-content: center;
+.heading {
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  color: #333333;
+}
 
-  }
-  
-  #lower {
-    position: absolute;
-    width:100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-  }
+.text {
+  font-family: "Arial", sans-serif;
+  color: black;
+  line-height: 1.5;
+  margin-top: 10px;
+}
 
-  .click-message {
-    position: absolute;
-    opacity: 1;
-    pointer-events: none;
-    transition: all 0.2s ease-in-out;
-    color: green;
-    border: thick solid green;
-    background-color: lightgreen;
-  }
-  
-  #payText{
-    display: block;
-  }
+.bounce-animation {
+  max-height: 5%;
+  max-width: 5%;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
 
-  .unSelectable {
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+.relativeFont {
+  font-size: 0.9vw;
+}
+
+.break-words {
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.restrictImage {
+  position: relative;
+  max-height: 90%;
+  max-width: 100%;
+}
+
+.moneyBill {
+  position: absolute;
+  opacity: 1;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  color: green;
+  border: thick solid green;
+  background-color: lightgreen;
+  max-height: 3%;
+  max-width: 2%;
+  font-size: 0.5vw;
+}
+
+.unSelectable {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
