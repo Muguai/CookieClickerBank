@@ -1,4 +1,4 @@
-# Noroff Accelerate assignment 1
+# Vanilla JS projects
 
 Main assignment: Tech shop challenge
 
