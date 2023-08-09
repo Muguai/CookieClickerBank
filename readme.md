@@ -1,6 +1,6 @@
 # Vanilla JS projects
 
-Main assignment: Tech shop challenge
+Main assignment: Tech shop challenge (Which turned into CookieClickerBank)
 
 Mini assignments: Blackjack game, Blog website
 
