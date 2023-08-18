@@ -1,4 +1,4 @@
-# Tech Shop CHallenge
+# Cookie Clicker Bank
 
 The assignment was to make a small little version of a tech shop using JS, Html and css 
 I went a bit overboard and made cookie clicker on top of that.
