@@ -13,13 +13,8 @@ Javascript needs to be enabled for website to work
 
 ## Screenshots/Gifs
 
-### Nice moving clouds
-
-![Animation](https://github.com/Muguai/Assignment1BankWorkLaptop/assets/37656342/cc778dd8-309d-4a64-a255-f1cd83928fac)
-
 ### Ohh cookie clicker
 
-![Animation4](https://github.com/Muguai/Assignment1BankWorkLaptop/assets/37656342/2a379406-ad7c-4826-a377-53879264762b)
-
+![Animation4](https://github.com/Muguai/CookieClickerBank/assets/37656342/b0c2516f-28cf-4f6f-a0b1-b465a5997247)
 
 
